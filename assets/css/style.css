@@ -59,9 +59,10 @@ input[type="text"] {
     border: 1px solid hsl(0, 0%, 18.82%);
 }
 
-.nav__search-button {
-    background-color: hsla(0, 0%, 100%, 0.08);
-    padding: 8px 16px;
+.nav-search__button {
+    background-color: #ccc;
+    cursor: pointer;
+    padding: 8px 20px;
 }
 
 .nav__menu {
