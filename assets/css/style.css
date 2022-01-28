@@ -62,6 +62,7 @@ input[type="text"] {
 .nav-search__button {
     background-color: #ccc;
     cursor: pointer;
+    transition: background-color 0.5s ease;
     padding: 8px 20px;
 }
 
@@ -91,7 +92,6 @@ input[type="text"] {
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
-    gap: 1rem;
     padding: 8px 16px;
     flex-direction: row;
 }
@@ -99,7 +99,7 @@ input[type="text"] {
 @media screen and (max-width: 960px) {
     .main-container {
         flex-direction: column;
-        align-items: flex-start;
+        /* align-items: flex-start; */
         justify-content: flex-start;
         /* text-align: center; */
     }
@@ -122,12 +122,12 @@ section.current-video {
     flex: 6 1 600px;
     margin-right: 8px;
     padding: 16px 0px;
+    margin-right: 1.2rem;
 }
 
 .current-video .content-container {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
 }
 
 .current__content-video {
@@ -135,10 +135,12 @@ section.current-video {
     height: 540px;
     background: #ccc;
     border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .current__content-title {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -147,24 +149,34 @@ section.current-video {
 .current__content-general-info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
-.main-info {
+.author-info {
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
+}
+
+.actions-views-wrapper {
+    margin-bottom: 1rem;
 }
 
 .actions-views-wrapper .container {
     display: flex;
     justify-content: space-between;
     font-family: sans-serif;
-    gap: 3rem;
+}
+
+.video-actions {
+    margin-left: 1.2rem;
 }
 
 .actions-list {
     display: flex;
-    gap: 1rem;
+}
+
+.actions-list li:not(:first-child) {
+    margin-left: 1.2rem;
 }
 
 .action-item {
@@ -206,6 +218,7 @@ section.current-video {
 
 .delimiter {
     box-shadow: 0px 3px 1px 1px rgba(255, 255, 255, 0.363);
+    margin-bottom: 1rem;
 }
 
 
@@ -220,12 +233,15 @@ section.suggested-videos {
 .suggested-videos .content-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem
 }
 
 .suggested-video {
     display: flex;
-    gap: 1rem;
+    margin-bottom: 1.7rem;
+}
+
+.suggested-video .suggested-video__thumb {
+    margin-right: 1rem;
 }
 
 .suggested-video .suggested-video__thumb {
@@ -241,7 +257,7 @@ section.suggested-videos {
 }
 
 .suggest-video .suggested-video__title {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
     color: #fff
 }
 
@@ -255,6 +271,10 @@ figure,
 
 figure:hover,
 .suggested-video__thumb:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+.nav-search__button:hover {
     background-color: rgba(255, 0, 0, 0.8);
 }
 
